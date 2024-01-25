@@ -1,11 +1,12 @@
 alert('Boas vindas ao jogo do número secreto!'); //Exibe uma mensagem de alerta na tela
-let numeroSecreto = parseInt(Math.random() * 100 + 1);  //Define uma variavel e atribui um valor aleatorio entre 1 e 100 a ela
+let numeroMaximo = 5000;
+let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);  //Define uma variavel e atribui um valor aleatorio entre 1 e 100 a ela
 console.log(numeroSecreto); //Exibe o número secreto no console
 let chute //Declara a variavel onde sera aramazenado o valor do chute
 let tentativas = 1;
 // Enquanto o chute for diferente do número secreto o jogo continua
 while (chute != numeroSecreto) {
-    chute = prompt('Escola um número entre 1 e 100');
+    chute = prompt(`Escola um número entre 1 e ${numeroMaximo}`);
     // se chute for igual ao numero secreto:
     if (chute == numeroSecreto) { // Compara se duas variaveis possuem o mesmo valor
         break;
